@@ -5,20 +5,30 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
+    // user-defined constructors
+    public Account(int number, double balance, String customerName, String customerEmail, String customerPhone){
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhone = customerPhone;
+    }
+
     public void diposit(double amount){
         this.balance += amount;
-        System.out.println("Balance : "+balance);
+        System.out.println("Diposit of "+amount+" is processed & Balance is : " + this.balance);
     }
 
     public void withdraw(double amount){
         if(amount > balance){
-            System.out.println("Insufficient Fund");
+            System.out.println("Balance is "+balance+" withdrawl not processed");
         } else {
-            balance -= amount;
-            System.out.println("Balance : "+balance);
+            this.balance -= amount;
+            System.out.println("Withdrawl of "+amount+ " is processed & Balance is : "+this.balance);
         }
     }
 
+    //getters & setters are not required after user-defined constructor
     public int getNumber() {
         return number;
     }
@@ -52,6 +62,4 @@ public class Account {
     public void setCustomerPhone(String customerPhone) {
         this.customerPhone = customerPhone;
     }
-
-    
 }
