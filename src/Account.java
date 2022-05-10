@@ -25,7 +25,7 @@ public class Account {
     public void setNumber(int number) {
         this.number = number;
     }
-    public int getBalance() {
+    public double getBalance() {
         if(balance < 0){
             System.out.println("Invalid Balance");
         }
