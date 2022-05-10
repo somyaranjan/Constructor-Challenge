@@ -14,9 +14,9 @@
 - **Create a new class VipCustomer**
 - **it should have 3 fields name, credit limit, and email address.**
 - **create 3 constructors**
-    1. constructor empty should call the constructor with 3 parameters with default values
-    2. constructor should pass on the 2 values it receives and add a default value for the 3rd
-    3. constructor should save all fields.
+    1. *constructor empty should call the constructor with 3 parameters with default values*
+    2. *constructor should pass on the 2 values it receives and add a default value for the 3rd*
+    3. *constructor should save all fields.*
 - **create getters only for this using code generation of intellij as setters wont be needed**
 - **test and confirm it works.**
 
