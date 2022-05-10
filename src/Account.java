@@ -4,7 +4,12 @@ public class Account {
     private String customerName;
     private String customerEmail;
     private String customerPhone;
-    
+
+    public void diposit(int ammount){
+        this.balance += ammount;
+        System.out.println("new balance : "+balance);
+    }
+
     public int getNumber() {
         return number;
     }
@@ -12,6 +17,9 @@ public class Account {
         this.number = number;
     }
     public int getBalance() {
+        if(balance < 0){
+            System.out.println("Invalid Balance");
+        }
         return balance;
     }
     public void setBalance(int balance) {
