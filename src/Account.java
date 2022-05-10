@@ -5,9 +5,18 @@ public class Account {
     private String customerEmail;
     private String customerPhone;
 
-    public void diposit(int ammount){
-        this.balance += ammount;
-        System.out.println("new balance : "+balance);
+    public void diposit(int amount){
+        this.balance += amount;
+        System.out.println("Balance : "+balance);
+    }
+
+    public void withdraw(int amount){
+        if(amount > balance){
+            System.out.println("Insufficient Fund");
+        } else {
+            balance -= amount;
+            System.out.println("Balance : "+balance);
+        }
     }
 
     public int getNumber() {
