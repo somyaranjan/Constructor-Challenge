@@ -1,16 +1,16 @@
 public class Account {
     private int number;
-    private int balance;
+    private double balance;
     private String customerName;
     private String customerEmail;
     private String customerPhone;
 
-    public void diposit(int amount){
+    public void diposit(double amount){
         this.balance += amount;
         System.out.println("Balance : "+balance);
     }
 
-    public void withdraw(int amount){
+    public void withdraw(double amount){
         if(amount > balance){
             System.out.println("Insufficient Fund");
         } else {
@@ -31,7 +31,7 @@ public class Account {
         }
         return balance;
     }
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
     public String getCustomerName() {
